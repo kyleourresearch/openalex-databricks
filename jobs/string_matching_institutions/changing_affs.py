@@ -2295,6 +2295,11 @@ def matching_based_on_current_affs(current_affs, aff_string):
             if not any(word in aff_string.lower() for word in ['ecole nationale des ponts','ecole des ponts paristech']):
                 current_affs.remove(142631665)
 
+    # University of Hong Kong
+    if 200769079 in current_affs:
+        if 'university of hong kong' not in aff_string.lower():
+            current_affs.remove(889458895)
+
 
     if not current_affs:
         current_affs.append(-1)
